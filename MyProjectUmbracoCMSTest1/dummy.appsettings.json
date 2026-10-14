@@ -1,6 +1,39 @@
-﻿namespace MyProjectUmbracoCMSTest1
-{
-    public class dummy
-    {
+﻿{
+  "$schema": "appsettings-schema.json",
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "Microsoft.Hosting.Lifetime": "Information",
+        "System": "Warning"
+      }
     }
+  },
+  "Umbraco": {
+    "CMS": {
+      "Global": {
+        "Id": "64da28f9-cd68-4239-8e84-6106cade07e8"
+      },
+      "Content": {
+        "AllowEditInvariantFromNonDefault": true,
+        "ContentVersionCleanupPolicy": {
+          "EnableCleanup": true
+        }
+      },
+      "Unattended": {
+        "UpgradeUnattended": true
+      },
+      "Security": {
+        "AllowConcurrentLogins": false
+      },
+      "Imaging": {
+        "HMACSecretKey": "NnLYLluv5/b3RQsSfDbNUzmu7qz38NYFF\u002B5hSnV1t6mGEBHradBPhmk3f2gnCiuDdYpbT\u002BaznSxCq7XKWqOd1w=="
+      }
+    },
+    "ConnectionStrings": {
+      
+      "umbracoDbDSN": ""
+    }
+  }
 }

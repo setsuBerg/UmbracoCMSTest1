@@ -1,6 +1,30 @@
-﻿namespace MyProjectUmbracoCMSTest1
-{
-    public class dummy
-    {
+﻿{
+  "$schema": "appsettings-schema.json",
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Information"
+    },
+    "WriteTo": [
+      {
+        "Name": "Async",
+        "Args": {
+          "configure": [
+            {
+              "Name": "Console"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Umbraco": {
+    "CMS": {
+      "ModelsBuilder": {
+        "ModelsMode": "SourceCodeAuto"
+      },
+      "Hosting": {
+        "Debug": true
+      }
     }
+  }
 }
